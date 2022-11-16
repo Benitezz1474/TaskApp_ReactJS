@@ -1,61 +1,18 @@
 import { useEffect, useReducer } from "react";
-import { AddTask,reducer,TaskList } from "./index";
+import { AddTask,reducer,TaskList,useReducers } from "./index";
 
-const initialState = JSON.parse(localStorage.getItem("task")) || []
 
 const TaskApp=()=>{
 
-  const [state, dispatch] = useReducer(reducer, initialState);
 
+   
+  const {onAddTask,state,onRemoveTask,onUpdateTask} = useReducers()//este es un custom hook
+
+  //cada vez que se elimina, agrega o actualiza el state, se guarda en el localStorage y
+  //use Effect se encarga de eso
   useEffect(()=>{
     localStorage.setItem("task",JSON.stringify(state))
   },[state])
-
-
-  //Esta funcion, al hacer el dispatch, AÑADE un objeto (tarea) al state
-  const onAddTask=(inputValue)=>{
-
-    const result = state.map(obj => {
-      if(obj.id == inputValue.id ) return "it found";
-    })
-
-    if(result.includes("it found")) return
-    
-    
-    const action = {
-      type:"Add",
-      payload: inputValue
-    }
-    
-    dispatch(action)
-    
-  }
-
-
-  //Esta funcion elimina elementos (tareas en este caso) por ID
-  const onRemoveTask=(id_task)=>{
-
-    
-    const action ={
-
-      type:"Del",
-      payload: id_task
-    }
-
-    dispatch(action)
-
-  }
-
-  const onUpdateTask=(id_task)=>{
-
-    const action = {
-      type:"Update",
-      payload: id_task
-    }
-
-    dispatch(action);
-
-  }
 
   return <div className="content">
 

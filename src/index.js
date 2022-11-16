@@ -3,3 +3,4 @@ export * from "./AddTask";
 export * from "./Hooks/useForm.js";
 export * from "./TaskList.jsx";
 export * from "./TaskItem.jsx";
+export * from "./Hooks/useReducers.js";

@@ -18,16 +18,21 @@
     text-decoration: line-through;
 }
 
+.input_green{
+    outline: 2px solid rgb(11, 197, 11);
+}
+
 .taskItem{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 10px;
     margin: 10px 0;
     box-shadow: 2px 2px 6px 0 var(--gray);
     width: 100%;
     min-width: 250px;
+    max-width: 400px;
     transition: all 0.4s;
 }
 
@@ -45,6 +50,7 @@
     color: #fff;
     outline: 0px solid #fff;
     transition: background 0.4s, outline 0.1s;
+    margin: 20px;
 }
 
 
@@ -58,9 +64,8 @@
 }
 
 .taskItem h2{
-    padding: 0 10px;
-    width: 30%;
     text-align: center;
+    margin: 20px 0;
 }
 
 form{
