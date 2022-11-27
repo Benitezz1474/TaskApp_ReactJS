@@ -14,7 +14,7 @@ export const TaskList =({tasks,onRemoveTask,onUpdateTask})=>{
 
         //Abuelo -> Padre -> Hijo = <TaskApp/> -> <TaskList/> -> <TaskItem/> 
         //De esta forma se pasan las props (NO Redux)
-        
+    
         
         //Por cada task renderizo un nuevo componente y le paso las props.
         tasks.map(task => {

@@ -1,6 +1,5 @@
 export const TaskItem=({tasks,onRemoveTask,onUpdateTask})=>{
     
-
     //Las funciones onUpdate y onRemove que vienen del padre
     //activan el dispatch() del useReducer en <TaskApp />  ;)
 

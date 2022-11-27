@@ -1,6 +1,5 @@
 export const reducer =(state,action)=>{
     
-
         switch(action.type){
 
             //Agrega una nueva tarea al state 

@@ -4,7 +4,6 @@ import { AddTask,reducer,TaskList,useReducers } from "./index";
 
 const TaskApp=()=>{
 
-
    
   const {onAddTask,state,onRemoveTask,onUpdateTask} = useReducers()//este es un custom hook
 
