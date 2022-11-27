@@ -3,9 +3,6 @@ import { storageShared } from "./Hooks/useContext";
 
 export const TaskItem=({tasks})=>{
     
-<<<<<<< HEAD
-    //Las funciones onUpdate y onRemove que vienen del padre
-=======
     //del useContext obtengo las funciones onRemoveTask y onUpdateTask para 
 
    
@@ -14,7 +11,6 @@ export const TaskItem=({tasks})=>{
     const {onRemoveTask, onUpdateTask} = storage_value;
 
     //Las funciones onUpdate y onRemove que vienen del useContext
->>>>>>> testing
     //activan el dispatch() del useReducer en <TaskApp />  ;)
         
     return <div className="taskItem" onClick={()=>onUpdateTask(tasks.id)} >
