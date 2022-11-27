@@ -5,7 +5,8 @@ export const TaskItem=({tasks})=>{
     
     //del useContext obtengo las funciones onRemoveTask y onUpdateTask para 
 
-    const storage_value = useContext(storageShared);
+   
+ const storage_value = useContext(storageShared);
 
     const {onRemoveTask, onUpdateTask} = storage_value;
 

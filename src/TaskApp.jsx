@@ -6,6 +6,7 @@ import { storageShared } from "./Hooks/useContext";
 const TaskApp=()=>{
 
 
+
    
   const {onAddTask,state,onRemoveTask,onUpdateTask} = useReducers()//este es un custom hook
 
